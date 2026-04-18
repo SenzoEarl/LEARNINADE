@@ -9,9 +9,10 @@ if os.environ.get('VERCEL_URL'):
     ALLOWED_HOSTS.append(os.environ.get('VERCEL_URL'))
 
 # Database
+# Use a fallback SQLite database if DATABASE_URL is not set (e.g., during build phase)
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=os.environ.get('DATABASE_URL', 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')),
         conn_max_age=600
     )
 }
@@ -20,7 +21,7 @@ DATABASES = {
 # Whitenoise for static files
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
