@@ -1,10 +1,7 @@
 # Learninade
 An online education system
 
-App is NOT up and running in the link below. 
-
-
-
+### Live: [Learninade on Vercel](https://learninade.vercel.app)
 ___
 
 #### Demo: [Learninade on Railway](https://blognificent.up.railway.app/)
@@ -36,4 +33,5 @@ ___
 1.  [Django](https://www.djangoproject.com/)
 2. [Bootstrap](https://getbootstrap.com/)
 3. [Railway](https://railway.app/)
-4. [Font Awesome](https://fontawesome.com/)
+4. [Vercel](https://vercel.com/)
+5. [Font Awesome](https://fontawesome.com/)
