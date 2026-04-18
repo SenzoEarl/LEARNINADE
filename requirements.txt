@@ -1,3 +1,6 @@
+whitenoise
+psycopg2-binary
+dj-database-url
 Django
 redis
 asgiref
@@ -17,7 +20,6 @@ tornado~=6.2
 packaging==23.0
 pyparsing~=3.0.9
 python-dotenv~=0.21.0
-psycopg2
 daphne
 crispy-bootstrap5
 django-redisboard
