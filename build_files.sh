@@ -7,7 +7,7 @@ echo "--- Build Starting ---"
 
 # Install dependencies
 echo "Installing dependencies..."
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt --break-system-packages
 
 # Create static directory if it doesn't exist
 mkdir -p staticfiles_build/static
